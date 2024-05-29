@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="main-page">
+        <img src="../resources/logo.png" alt="Logo Pokedex">
+        <div class="navbar">
+            <button class="search-icon" onclick="toggleSearch()"><i class="fas fa-search"></i></button>
+            <input type="text" class="search-input" placeholder="Search..." style="display: none;">
+            <button class="botones">Order</button>
+            <button id="botonCrearPokemon" class="botones">Create Pokemon</button>
+            <button id="botonMostrarPersonalizado" class="botones">View custom Pokemon</button>
+        </div>
+        <div class="pokemon-container">
+            <div id="pokemon-grid" class="pokemon-grid">
+                <!-- Los Pokémon -->
+            </div>
+
+        <div class="navigation">
+            <button id="prevButton" disabled>Anterior</button>
+            <span>Página: <span id="currentPage">1</span></span>
+            <input type="number" id="pageInput" min="1" value="1">
+            <button id="goButton">Ir</button>
+            <button id="nextButton">Siguiente</button>
+        </div>
+
+        <audio id="miAudio" controls autoplay loop autobuffer>
+            <source src="/resources/Pokemon Soundtrack.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+    <script src="../js/pokemons.js"></script>
+</body>
+
+</html>
